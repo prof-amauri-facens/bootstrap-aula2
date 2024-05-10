@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Carrossel em Bootstrap</title>
+    <!-- Link para o Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- No Bootstrap, um carousel é um componente de interface de usuário que permite exibir uma série de conteúdos, como imagens, 
+            textos ou vídeos, em uma sequência animada. Ele é útil para criar banners de destaque, galerias de imagens, sliders de 
+            produtos e muito mais. -->
+
+        <h1>Exemplo de Carrossel em Bootstrap</h1>
+        <!-- Este é o contêiner principal do carrossel. O id é usado para identificar o carrossel de forma única. A classe carousel 
+            indica que este é um componente de carrossel do Bootstrap. O atributo data-bs-ride="carousel" indica que o carrossel será 
+            iniciado automaticamente e pode ser controlado por meio de botões. -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <!-- Esta div contém os indicadores de slide do carrossel. Cada <button> dentro dela representa um indicador para um slide 
+                específico. O atributo data-bs-target indica o alvo do indicador (o ID do carrossel). O atributo data-bs-slide-to 
+                indica o índice do slide que este indicador representa. A classe active é usada para indicar o indicador ativo. -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- sta div contém os slides do carrossel. Cada <div> dentro dela com a classe carousel-item representa um slide. 
+                O slide ativo é marcado com a classe active. -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+1" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+2" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400?text=Slide+3" class="d-block w-100" alt="Slide 3">
+                </div>
+            </div>
+
+            <!-- Este é o botão de controle para navegar para o slide anterior. O atributo data-bs-target indica o alvo do controle 
+                (o ID do carrossel) e o atributo data-bs-slide indica a direção da navegação (para o slide anterior). -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <!-- A tag <span> é um elemento de marcação em HTML usado para agrupar e estilizar partes de um texto ou conteúdo sem 
+                    alterar a estrutura semântica do documento. Ela é usada principalmente para aplicar estilos, como cor, fonte, 
+                    tamanho e outros, por meio de CSS, sem afetar o layout geral do documento. -->
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <!-- Este é o botão de controle para navegar para o próximo slide. Os atributos são semelhantes aos do botão anterior, mas 
+                indicam a direção oposta. -->
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Link para o Bootstrap JS (opcional, apenas se você precisar de funcionalidades JS do Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
